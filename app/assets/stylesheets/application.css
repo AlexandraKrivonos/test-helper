@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+body {
+  margin: 0;
+}
 
 h1 {
   font-size: 4rem;
@@ -61,4 +64,18 @@ h1 {
 td.table__item {
   font-size: 1rem;
   width: 1rem;
+}
+
+.create-page {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
 }
