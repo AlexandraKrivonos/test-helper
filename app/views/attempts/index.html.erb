@@ -1,27 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Attempts</h1>
+<div class="page__content">
+  <%= link_to 'Back to home page', root_path %>
+  
+  <div class="page__header">
+    <h1>Attempts</h1>
+    <%= link_to 'New Attempt', new_attempt_path, class: 'button' %>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @attempts.each do |attempt| %>
-      <tr>
-        <td><%= attempt.title %></td>
-        <td><%= link_to 'Show', attempt %></td>
-        <td><%= link_to 'Edit', edit_attempt_path(attempt) %></td>
-        <td><%= link_to 'Destroy', attempt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Attempt', new_attempt_path %>
+  <table>
+    <tbody>
+      <% @attempts.each do |attempt| %>
+        <tr>
+          <td class="table__item"><%= attempt.title %></td>
+          <td class="table__item"><%= link_to 'Show', attempt %></td>
+          <td class="table__item"><%= link_to 'Edit', edit_attempt_path(attempt) %></td>
+          <td class="table__item"><%= link_to 'Destroy', attempt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
