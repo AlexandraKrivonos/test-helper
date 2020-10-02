@@ -1,5 +1,5 @@
 class AttemptsController < ApplicationController
-  before_action :set_attempt, only: [:show, :edit, :update, :destroy]
+  before_action :set_attempt, only: %i[show edit update destroy]
 
   # GET /attempts
   # GET /attempts.json
@@ -35,8 +35,7 @@ class AttemptsController < ApplicationController
   end
 
   # GET /attempts/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /attempts
   # POST /attempts.json
@@ -79,17 +78,18 @@ class AttemptsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_attempt
-      @attempt = Attempt.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def attempt_params
-      params.require(:attempt).permit(:title)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_attempt
+    @attempt = Attempt.find(params[:id])
+  end
 
-    def answer_params
-      params.require(:answer).permit(:code, :attempt_id)
-    end
+  # Only allow a list of trusted parameters through.
+  def attempt_params
+    params.require(:attempt).permit(:title)
+  end
+
+  def answer_params
+    params.require(:answer).permit(:code, :attempt_id)
+  end
 end

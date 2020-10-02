@@ -5,17 +5,17 @@ class AttemptsControllerTest < ActionDispatch::IntegrationTest
     @attempt = attempts(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get attempts_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_attempt_url
     assert_response :success
   end
 
-  test "should create attempt" do
+  test 'should create attempt' do
     assert_difference('Attempt.count') do
       post attempts_url, params: { attempt: { title: @attempt.title } }
     end
@@ -23,22 +23,22 @@ class AttemptsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to attempt_url(Attempt.last)
   end
 
-  test "should show attempt" do
+  test 'should show attempt' do
     get attempt_url(@attempt)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_attempt_url(@attempt)
     assert_response :success
   end
 
-  test "should update attempt" do
+  test 'should update attempt' do
     patch attempt_url(@attempt), params: { attempt: { title: @attempt.title } }
     assert_redirected_to attempt_url(@attempt)
   end
 
-  test "should destroy attempt" do
+  test 'should destroy attempt' do
     assert_difference('Attempt.count', -1) do
       delete attempt_url(@attempt)
     end
