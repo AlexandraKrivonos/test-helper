@@ -1,0 +1,37 @@
+// Place all the styles related to the attempts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.question-image {
+  img {
+    height: 100px;
+  }
+}
+
+.space-between-questions {
+  padding: 3rem;
+}
+
+.answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.number {
+  font-size: 30px;
+}
+
+.answer-create {
+  input {
+    font-size: 50px;
+  }
+}
+
+.answer-create-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

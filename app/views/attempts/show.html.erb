@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @attempt.title %>
+</p>
+
+<%= render 'answer_form', answer: @new_answer %>
+
+<div>
+  <% @attempt.answers.order(:created_at).reverse.each_with_index do |answer, index| %>
+     <div class="answer">
+        <p class="number">
+          <%= @attempt.answers.size - index %>
+        </p>
+          <%= answer.code %>
+        <div class="question-image">
+          <%= Question.find_by(code: answer.code)&.image.present? ? image_tag(Question.find_by(code: answer.code).image) : image_tag('download.png') %>
+        </div>
+        <%= link_to 'Edit', edit_answer_path(answer) %>
+        <%= link_to 'Destroy', answer, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Back', attempts_path %>
