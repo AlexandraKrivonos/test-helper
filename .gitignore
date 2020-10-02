@@ -34,3 +34,8 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+pg_upgrade_internal.log
+pg_upgrade_server.log
+pg_upgrade_utility.log
+logfile
