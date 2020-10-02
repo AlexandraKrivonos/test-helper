@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+h1 {
+  font-size: 4rem;
+}
+
+.page__content {
+  margin: 5rem;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+}
+
+.navigation__item {
+  font-size: 1.5rem;
+  padding: .7rem 0;
+}
+
+.page__header {
+  display: flex;
+  height: 10rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
