@@ -1,1 +1,1 @@
-json.partial! "attempts/attempt", attempt: @attempt
+json.partial! 'attempts/attempt', attempt: @attempt
